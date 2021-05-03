@@ -1,11 +1,6 @@
-/**
-* Template Name: Lonely - v4.1.0
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-lonely/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
+  
 
   /**
    * Easy selector helper function
@@ -39,6 +34,16 @@
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
+
+  /**
+   * Preloader
+   */
+   let preloader = select('#preloader');
+   if (preloader) {
+     window.addEventListener('load', () => {
+       preloader.remove()
+     });
+   }
 
   /**
    * Navbar links active state on scroll
